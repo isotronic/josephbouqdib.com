@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  @apply grid min-h-screen bg-slate-900 leading-relaxed text-slate-100;
   font-family: Inter, sans-serif;
 
   text-rendering: optimizeLegibility;

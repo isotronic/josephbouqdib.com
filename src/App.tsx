@@ -1,11 +1,16 @@
 import { HandRaisedIcon } from "@heroicons/react/24/solid";
-function App() {
+import NavBar from "./components/NavBar";
+import SocialLinks from "./components/SocialLinks";
+
+export default function App() {
   return (
-    <div className="flex min-h-screen flex-row items-center justify-center gap-3 bg-slate-900 leading-relaxed text-slate-300">
-      <h1 className="text-3xl">Hi there!</h1>
-      <HandRaisedIcon className="size-8" />
+    <div className="flex min-h-screen flex-col">
+      <NavBar />
+      <SocialLinks />
+      <main className="m-auto flex flex-row gap-3">
+        <h1 className="text-3xl">Hi there!</h1>
+        <HandRaisedIcon className="size-8" />
+      </main>
     </div>
   );
 }
-
-export default App;
