@@ -1,14 +1,37 @@
 import { useState } from "react";
-import HexagonImg from "../assets/hexagon.png";
 
-export default function NavBar() {
+const NavBar: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
     <nav>
       <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between p-4">
         <a href="/" className="flex items-center space-x-3">
-          <img src={HexagonImg} className="h-8" alt="Flowbite Logo" />
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="50,5 90,25 90,75 50,95 10,75 10,25"
+              fill="#0f172a"
+              stroke="#22c55e"
+              stroke-width="4"
+            />
+
+            <text
+              x="50%"
+              y="52%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+              font-family="Inter"
+              font-size="35"
+              fill="#22c55e"
+            >
+              JB
+            </text>
+          </svg>
         </a>
         <button
           onClick={() => setIsNavOpen((prev) => !prev)}
@@ -61,4 +84,6 @@ export default function NavBar() {
       </div>
     </nav>
   );
-}
+};
+
+export default NavBar;
