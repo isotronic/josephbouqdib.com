@@ -1,9 +1,11 @@
+import AnimatedSection from "./AnimatedSection";
+
 import ProfilePic from "../assets/profile-pic.png";
 
 const AboutSection: React.FC = () => {
   return (
     <>
-      <section
+      <AnimatedSection
         id="about"
         className="mx-auto mb-12 flex max-w-6xl flex-col px-12 md:flex-row lg:items-center lg:px-0"
       >
@@ -44,7 +46,7 @@ const AboutSection: React.FC = () => {
             <li>Python</li>
           </ul>
         </div>
-      </section>
+      </AnimatedSection>
     </>
   );
 };

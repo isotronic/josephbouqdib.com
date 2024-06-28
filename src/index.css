@@ -32,3 +32,16 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #4ade80; /* green-400 */
 }
+
+.hidden-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 1s ease-out,
+    transform 1s ease-out;
+}
+
+.visible-section {
+  opacity: 1;
+  transform: translateY(0);
+}

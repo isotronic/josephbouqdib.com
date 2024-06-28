@@ -1,6 +1,8 @@
+import AnimatedSection from "./AnimatedSection";
+
 const ContactSection: React.FC = () => {
   return (
-    <section
+    <AnimatedSection
       id="contact"
       className="mx-auto my-60 max-w-lg px-12 py-12 text-center lg:px-0"
     >
@@ -16,7 +18,7 @@ const ContactSection: React.FC = () => {
       >
         Say Hello
       </a>
-    </section>
+    </AnimatedSection>
   );
 };
 
