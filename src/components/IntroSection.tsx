@@ -1,3 +1,5 @@
+import Resume from "../assets/Resume-Joseph_Bouqdib.pdf";
+
 const AboutSection: React.FC = () => {
   return (
     <section className="flex min-h-screen items-center justify-center">
@@ -13,10 +15,13 @@ const AboutSection: React.FC = () => {
           mobile applications using React and Node.js.
         </p>
         <a
-          href="#"
+          href={Resume}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Resume"
           className="mb-16 mt-8 inline-block rounded-md border border-green-400 px-6 py-3 text-green-500 transition hover:bg-green-500 hover:text-slate-900"
         >
-          Check out my course!
+          Check out my résumé
         </a>
       </div>
     </section>
