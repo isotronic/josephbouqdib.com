@@ -78,12 +78,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
         <div className="flex space-x-4 text-xl text-green-400">
           {githubUrl && (
-            <a href={githubUrl}>
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
               <FaGithub />
             </a>
           )}
           {liveUrl && (
-            <a href={liveUrl}>
+            <a
+              href={liveUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Live site"
+            >
               <FaExternalLinkAlt />
             </a>
           )}
