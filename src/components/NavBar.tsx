@@ -65,17 +65,17 @@ const NavBar: React.FC = () => {
         >
           <ul className="flex h-full flex-col space-y-4 overflow-y-auto p-4 font-medium md:mt-0 md:h-auto md:flex-row md:space-x-12 md:space-y-0 md:overflow-y-visible md:p-0">
             <li>
-              <a href="#about" className="block hover:text-slate-400">
+              <a href="#about" className="block hover:text-green-500">
                 About
               </a>
             </li>
             <li>
-              <a href="#projects" className="block hover:text-slate-400">
+              <a href="#projects" className="block hover:text-green-500">
                 Projects
               </a>
             </li>
             <li>
-              <a href="#contact" className="block hover:text-slate-400">
+              <a href="#contact" className="block hover:text-green-500">
                 Contact
               </a>
             </li>
