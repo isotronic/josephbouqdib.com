@@ -1,3 +1,4 @@
+import * as React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa6";
 
 const SocialLinks: React.FC = () => {

@@ -4,7 +4,7 @@ This is the repository for my personal website.
 
 ## About
 
-My personal website is built on Vite using TypeScript, React, and Tailwind CSS. Feel free to use this repo as a starting point for your own project.
+My personal website is built on Gatsby using TypeScript, React, and Tailwind CSS. Feel free to use this repo as a starting point for your own project.
 
 ## Technologies Used
 
@@ -34,8 +34,6 @@ Ensure you have the following installed on your local machine:
 
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
 ### Running the Development Server
@@ -43,28 +41,24 @@ Ensure you have the following installed on your local machine:
 Start the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
+npm run develop
 ```
 
-The website should now be running at [http://localhost:5173](http://localhost:5173).
+The website should now be running at [http://localhost:8000](http://localhost:8000).
 
 ### Building for Production
 
 To create a production build, run:
 
 ```bash
-npm run build
-# or
-yarn build
+npm gatsby build
 ```
 
-The output will be in the `dist` directory.
+The output will be in the `public` directory.
 
 ### Deployment
 
-Deploy the contents of the `dist` directory to your preferred web hosting service.
+Deploy the contents of the `public` directory to your preferred web hosting service.
 
 ## License
 

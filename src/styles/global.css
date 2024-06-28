@@ -6,7 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 
-:root {
+body {
   @apply grid bg-slate-900 leading-relaxed text-slate-300;
   font-family: Inter, sans-serif;
   text-rendering: optimizeLegibility;

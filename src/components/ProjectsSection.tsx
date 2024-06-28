@@ -1,3 +1,4 @@
+import * as React from "react";
 import { FaGithub, FaRegFolder } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
