@@ -8,7 +8,7 @@ const SocialLinks: React.FC = () => {
         target="_blank"
         rel="noreferrer"
         aria-label="GitHub"
-        className="transition hover:text-green-400"
+        className="transition hover:text-green-500"
       >
         <FaGithub size={30} />
       </a>
@@ -17,7 +17,7 @@ const SocialLinks: React.FC = () => {
         target="_blank"
         rel="noreferrer"
         aria-label="LinkedIn"
-        className="transition hover:text-green-400"
+        className="transition hover:text-green-500"
       >
         <FaLinkedin size={30} />
       </a>
@@ -26,7 +26,7 @@ const SocialLinks: React.FC = () => {
         target="_blank"
         rel="noreferrer"
         aria-label="Email"
-        className="transition hover:text-green-400"
+        className="transition hover:text-green-500"
       >
         <FaEnvelope size={30} />
       </a>

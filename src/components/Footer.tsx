@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noreferrer"
           aria-label="GitHub"
-          className="transition hover:text-green-400"
+          className="transition hover:text-green-500"
         >
           <FaGithub size={24} />
         </a>
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noreferrer"
           aria-label="LinkedIn"
-          className="transition hover:text-green-400"
+          className="transition hover:text-green-500"
         >
           <FaLinkedin size={24} />
         </a>

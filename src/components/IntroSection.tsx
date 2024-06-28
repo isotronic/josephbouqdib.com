@@ -19,9 +19,9 @@ const AboutSection: React.FC = () => {
           target="_blank"
           rel="noreferrer"
           aria-label="Resume"
-          className="mb-16 mt-8 inline-block rounded-md border border-green-400 px-6 py-3 text-green-500 transition hover:bg-green-500 hover:text-slate-900"
+          className="mb-16 mt-8 inline-block rounded-md border border-green-500 px-6 py-3 text-green-500 transition hover:bg-green-500 hover:text-slate-900"
         >
-          Check out my résumé
+          Check out my resume
         </a>
       </div>
     </section>

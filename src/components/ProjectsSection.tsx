@@ -75,10 +75,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div className="rounded-lg bg-slate-800 p-6 shadow-sm">
       <div className="flex items-center justify-between">
-        <div className="text-4xl text-green-400">
+        <div className="text-4xl text-green-500">
           <FaRegFolder />
         </div>
-        <div className="flex space-x-4 text-xl text-green-400">
+        <div className="flex space-x-4 text-xl text-green-500">
           {githubUrl && (
             <a
               href={githubUrl}
