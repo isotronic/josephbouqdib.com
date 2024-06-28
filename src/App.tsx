@@ -1,11 +1,25 @@
-import { HandRaisedIcon } from "@heroicons/react/24/solid";
-function App() {
+import NavBar from "./components/NavBar";
+import SocialLinks from "./components/SocialLinks";
+import IntroSection from "./components/IntroSection";
+import AboutSection from "./components/AboutSection";
+import ProjectsSection from "./components/ProjectsSection";
+import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
+
+const App: React.FC = () => {
   return (
-    <div className="flex min-h-screen flex-row items-center justify-center gap-3 bg-slate-900 leading-relaxed text-slate-300">
-      <h1 className="text-3xl">Hi there!</h1>
-      <HandRaisedIcon className="size-8" />
+    <div className="flex min-h-screen flex-col">
+      <NavBar />
+      <SocialLinks />
+      <main className="container mx-auto">
+        <IntroSection />
+        <AboutSection />
+        <ProjectsSection />
+        <ContactSection />
+      </main>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
