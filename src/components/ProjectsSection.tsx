@@ -1,6 +1,8 @@
 import { FaGithub, FaRegFolder } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
+import AnimatedSection from "./AnimatedSection";
+
 interface Project {
   title: string;
   description: string;
@@ -114,7 +116,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
 const ProjectsSection: React.FC = () => {
   return (
-    <section
+    <AnimatedSection
       id="projects"
       className="mx-auto mt-60 max-w-6xl px-12 py-12 lg:px-0"
     >
@@ -125,7 +127,7 @@ const ProjectsSection: React.FC = () => {
           <ProjectCard key={index} {...project} />
         ))}
       </div>
-    </section>
+    </AnimatedSection>
   );
 };
 
