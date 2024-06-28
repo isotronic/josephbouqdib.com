@@ -55,6 +55,27 @@ const projects: Project[] = [
     tags: ["Python"],
     githubUrl: "https://github.com/isotronic/data-analysis",
   },
+  {
+    title: "Eva Schindele website",
+    description:
+      "Website for Dr. Eva Schindele, a distinguished social scientist and journalist.",
+    tags: ["WordPress"],
+    liveUrl: "https://eva-schindele.de",
+  },
+  {
+    title: "Bublitz website",
+    description:
+      "Website for Bublitz gGmbH, an artist and curator initiative that blends art and cultural history.",
+    tags: ["WordPress", "CSS"],
+    liveUrl: "https://bublitz.org/en/",
+  },
+  {
+    title: "Bauleitkontor website",
+    description:
+      "Website for Norddeutsches Bauleitkontor GmbH, a firm specializing in planning, construction management, and supervision.",
+    tags: ["WordPress"],
+    liveUrl: "https://bauleitkontor.de",
+  },
 ];
 
 interface ProjectCardProps {
