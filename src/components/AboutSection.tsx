@@ -1,6 +1,8 @@
+import * as React from "react";
+
 import AnimatedSection from "./AnimatedSection";
 
-import ProfilePic from "../assets/profile-pic.png";
+import ProfilePic from "../images/profile-pic.png";
 
 const AboutSection: React.FC = () => {
   return (
