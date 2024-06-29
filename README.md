@@ -4,7 +4,7 @@ This is the repository for my personal website.
 
 ## About
 
-My personal website is built on Gatsby using TypeScript, React, and Tailwind CSS. Feel free to use this repo as a starting point for your own project.
+My personal website is built on Gatsby using TypeScript, React, and Tailwind CSS. You can use this repo as a starting point for your project.
 
 ## Technologies Used
 
@@ -48,7 +48,7 @@ The website should now be running at [http://localhost:8000](http://localhost:80
 
 ### Building for Production
 
-To create a production build, run:
+To create a production build, run the following:
 
 ```bash
 npm gatsby build
@@ -62,8 +62,10 @@ Deploy the contents of the `public` directory to your preferred web hosting serv
 
 ## License
 
-This code is licensed under the Creative Commons Attribution 4.0 International License. See the [LICENSE](https://creativecommons.org/licenses/by/4.0/) file for more details.
+The code is licensed under the Creative Commons Attribution 4.0 International License. See the [LICENSE](https://creativecommons.org/licenses/by/4.0/) file for more details.
+
+The Text is my own. You can use it as inspiration, but please do not just copy it one to one.
 
 ## Contact
 
-You can reach me through my [website](https://bouqdib.com) or via email here [joseph@bouqdib.com](mailto:joseph@bouqdib.com).
+You can reach me through my [website](https://josephbouqdib.com).
