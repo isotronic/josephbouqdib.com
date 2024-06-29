@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-bouqdib",
+  "name": "josephbouqdib.com",
   "version": "1.0.0",
   "private": true,
-  "description": "gatsby-bouqdib",
+  "description": "My personal portfolio website built with Gatsby,TypeScript, React and Tailwind CSS.",
   "author": "Joseph Bouqdib",
   "keywords": [
     "gatsby"
@@ -19,9 +19,7 @@
     "@fontsource-variable/inter": "^5.0.18",
     "autoprefixer": "^10.4.19",
     "gatsby": "^5.13.5",
-    "gatsby-plugin-google-gtag": "^5.13.1",
     "gatsby-plugin-postcss": "^6.13.1",
-    "gatsby-plugin-sitemap": "^6.13.1",
     "postcss": "^8.4.38",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
