@@ -1,25 +1,40 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const NavBar: React.FC = () => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
+  const [showNav, setShowNav] = useState<boolean>(true);
+  const [lastScrollY, setLastScrollY] = useState<number>(0);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > lastScrollY) {
+      setShowNav(false);
+    } else {
+      setShowNav(true);
+    }
+    setLastScrollY(window.scrollY);
+    setIsScrolled(window.scrollY > 80);
+  };
+
+  useEffect(() => {
+    setLastScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
 
   return (
-    <nav>
+    <nav
+      className={`fixed w-full bg-slate-900 z-10  transition-transform duration-300 ${
+        showNav ? "translate-y-0" : "-translate-y-full"
+      } ${isScrolled ? "shadow-md" : ""}`}
+    >
       <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between p-4">
         <a href="/" className="flex items-center space-x-3">
-          <svg
-            width="50"
-            height="50"
-            viewBox="0 0 100 100"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <polygon
-              points="50,5 90,25 90,75 50,95 10,75 10,25"
-              fill="#0f172a"
-              stroke="#22c55e"
-              stroke-width="4"
-            />
+          <svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" fill="#0f172a" stroke="#22c55e" stroke-width="4" />
 
             <text
               x="50%"
