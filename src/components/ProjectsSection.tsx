@@ -15,11 +15,9 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Portfolio website",
-    description:
-      "This is my portfolio website, built with React and Tailwind CSS.",
+    description: "This is my portfolio website, built with React and Tailwind CSS.",
     tags: ["TypeScript", "React", "Tailwind CSS"],
-    githubUrl: "https://github.com/isotronic/bouqdib.com",
-    liveUrl: "https://bouqdib.com",
+    githubUrl: "https://github.com/isotronic/josephbouqdib.com",
   },
   {
     title: "Simple full-stack blog",
@@ -30,8 +28,7 @@ const projects: Project[] = [
   },
   {
     title: "Food Finder App",
-    description:
-      "This is a web app that helps users find nearby restaurants based on their preferences and location.",
+    description: "This is a web app that helps users find nearby restaurants based on their preferences and location.",
     tags: ["TypeScript", "React", "Firebase"],
     githubUrl: "https://github.com/isotronic/food-finder-app",
   },
@@ -57,21 +54,19 @@ const projects: Project[] = [
     githubUrl: "https://github.com/isotronic/data-analysis",
   },
   {
-    title: "Eva Schindele website",
-    description:
-      "Website for Dr. Eva Schindele, a distinguished social scientist and journalist.",
+    title: "Eva Schindele",
+    description: "Website for Dr. Eva Schindele, a distinguished social scientist and journalist.",
     tags: ["WordPress"],
     liveUrl: "https://eva-schindele.de",
   },
   {
-    title: "Bublitz website",
-    description:
-      "Website for Bublitz gGmbH, an artist and curator initiative that blends art and cultural history.",
+    title: "Bublitz",
+    description: "Website for Bublitz gGmbH, an artist and curator initiative that blends art and cultural history.",
     tags: ["WordPress", "CSS"],
     liveUrl: "https://bublitz.org/en/",
   },
   {
-    title: "Bauleitkontor website",
+    title: "Norddeutsches Bauleitkontor",
     description:
       "Website for Norddeutsches Bauleitkontor GmbH, a firm specializing in planning, construction management, and supervision.",
     tags: ["WordPress"],
@@ -87,13 +82,7 @@ interface ProjectCardProps {
   liveUrl?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
-  title,
-  description,
-  tags,
-  githubUrl,
-  liveUrl,
-}) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tags, githubUrl, liveUrl }) => {
   return (
     <div className="rounded-lg bg-slate-800 p-6 shadow-sm">
       <div className="flex items-center justify-between">
@@ -102,22 +91,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
         <div className="flex space-x-4 text-xl text-green-500">
           {githubUrl && (
-            <a
-              href={githubUrl}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-            >
+            <a href={githubUrl} target="_blank" rel="noreferrer" aria-label="GitHub">
               <FaGithub />
             </a>
           )}
           {liveUrl && (
-            <a
-              href={liveUrl}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Live site"
-            >
+            <a href={liveUrl} target="_blank" rel="noreferrer" aria-label="Live site">
               <FaExternalLinkAlt />
             </a>
           )}
@@ -138,10 +117,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
 const ProjectsSection: React.FC = () => {
   return (
-    <AnimatedSection
-      id="projects"
-      className="mx-auto mt-60 max-w-6xl px-12 py-12 lg:px-0"
-    >
+    <AnimatedSection id="projects" className="mx-auto mt-60 max-w-6xl px-12 py-12 lg:px-0">
       <h2 className="text-center text-3xl font-semibold">Projects</h2>
 
       <div className="mt-12 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

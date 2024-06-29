@@ -1,10 +1,10 @@
-# bouqdib.com
+# joseph.bouqdib.com
 
 This is the repository for my personal website.
 
 ## About
 
-My personal website is built on Gatsby using TypeScript, React, and Tailwind CSS. You can use this repo as a starting point for your project.
+My personal website is built on Gatsby using TypeScript, React, and Tailwind CSS. Feel free to use this repo as a starting point for your project.
 
 ## Technologies Used
 
@@ -26,8 +26,8 @@ Ensure you have the following installed on your local machine:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/isotronic/bouqdib.com.git
-   cd bouqdib.com
+   git clone https://github.com/isotronic/josephbouqdib.com.git
+   cd josephbouqdib.com
    ```
 
 2. Install dependencies:
@@ -68,4 +68,4 @@ The Text is my own. You can use it as inspiration, but please do not just copy i
 
 ## Contact
 
-You can reach me through my [website](https://josephbouqdib.com).
+You can reach me through my [website](https://joseph.bouqdib.com).

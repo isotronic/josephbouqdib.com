@@ -1,5 +1,5 @@
 import * as React from "react";
-import Resume from "../downloads/Resume-Joseph_Bouqdib.pdf";
+import Resume from "../static/resume-joseph_bouqdib.pdf";
 
 const AboutSection: React.FC = () => {
   return (
