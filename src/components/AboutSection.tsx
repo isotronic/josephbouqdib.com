@@ -20,29 +20,26 @@ const AboutSection: React.FC = () => {
         </div>
         <div className="mt-8 w-full space-y-10 text-left md:mt-0 md:w-2/3 md:pl-12">
           <h2 className="text-3xl font-semibold">About Me</h2>
-          <p className="">
-            Hello! My name is Joseph Bouqdib, and I am a self-taught web
-            developer with a passion for creating beautiful and functional
-            websites and apps.
+          <p>
+            Hello! My name is Joseph Bouqdib, and I am a self-taught web developer with a passion for creating beautiful
+            and functional websites and apps.
           </p>
-          <p className="">
-            My journey in web development began with learning HTML, CSS, and PHP
-            while working for a small company alongside two other developers.
-            After a break from tech, I started building and managing websites
-            using WordPress for some time. However, I eventually wanted to get
-            back to the freedom of starting from scratch with a blank document,
-            which led me to first explore Python for writing scripts and then
-            React and Node.js for creating complete websites and apps. I am
-            constantly striving to improve myself and enjoy learning about new
-            technologies
+          <p>
+            My journey in web development began with learning HTML, CSS, and PHP while working for a small company
+            alongside two other developers. After a break from tech, I started building and managing websites using
+            WordPress for some time. However, I eventually wanted to get back to the freedom of coding from scratch
+            without any constraints, which led me to first explore Python for writing scripts and then React and Node.js
+            for creating complete websites and apps. I am constantly striving to improve myself and enjoy learning about
+            new technologies.
           </p>
-          <p className="">These are some of the technologies I have used:</p>
-          <ul className="grid list-inside list-disc grid-cols-2 gap-2">
+          <p>These are some of the technologies I have used:</p>
+          <ul className="grid list-inside list-disc grid-cols-2 gap-2 marker:text-green-500">
             <li>JavaScript</li>
             <li>TypeScript</li>
             <li>React (Native)</li>
             <li>Express</li>
             <li>Node.js</li>
+            <li>Firebase</li>
             <li>MongoDB</li>
             <li>SQL</li>
             <li>Python</li>
