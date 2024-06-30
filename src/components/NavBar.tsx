@@ -1,6 +1,8 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 
+import Resume from "../static/resume-joseph_bouqdib.pdf";
+
 const NavBar: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
   const [showNav, setShowNav] = useState<boolean>(true);
@@ -25,17 +27,34 @@ const NavBar: React.FC = () => {
     };
   });
 
+  useEffect(() => {
+    if (isNavOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isNavOpen]);
+
   return (
     <nav
-      className={`fixed w-full bg-slate-900 z-10  transition-transform duration-300 ${
+      className={`fixed z-10 w-full bg-slate-900 transition-transform duration-300 ${
         showNav ? "translate-y-0" : "-translate-y-full"
       } ${isScrolled ? "shadow-md" : ""}`}
     >
       <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between p-4">
         <a href="/" className="flex items-center space-x-3">
-          <svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" fill="#0f172a" stroke="#22c55e" stroke-width="4" />
-
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="50,5 90,25 90,75 50,95 10,75 10,25"
+              fill="#0f172a"
+              stroke="#22c55e"
+              stroke-width="4"
+            />
             <text
               x="50%"
               y="52%"
@@ -53,13 +72,13 @@ const NavBar: React.FC = () => {
           onClick={() => setIsNavOpen((prev) => !prev)}
           data-collapse-toggle="navbar-default"
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm md:hidden"
+          className="z-30 inline-flex h-12 w-12 items-center justify-center rounded-lg p-2 text-sm hover:text-green-500 md:hidden"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
           <span className="sr-only">Open main menu</span>
           <svg
-            className="h-5 w-5 hover:text-slate-500"
+            className="h-7 w-7"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -75,29 +94,55 @@ const NavBar: React.FC = () => {
           </svg>
         </button>
         <div
-          className={`fixed right-0 top-16 h-screen w-1/3 transform ${
+          className={`mobile-menu-bg fixed right-0 top-0 z-20 h-screen w-1/2 transform drop-shadow-xl ${
             isNavOpen ? "translate-x-0" : "translate-x-full"
           } transition-transform duration-300 md:relative md:right-0 md:top-0 md:block md:h-auto md:w-auto md:transform-none md:bg-transparent md:shadow-none`}
         >
-          <ul className="flex h-full flex-col space-y-4 overflow-y-auto p-4 font-medium md:mt-0 md:h-auto md:flex-row md:space-x-12 md:space-y-0 md:overflow-y-visible md:p-0">
+          <ul className="flex h-full min-h-screen flex-col items-center justify-center space-y-4 p-8 text-xl font-semibold md:mt-0 md:h-auto md:min-h-0 md:flex-row md:space-x-12 md:space-y-0 md:p-0 md:text-base md:font-medium">
             <li>
-              <a href="#about" className="block hover:text-green-500">
+              <a
+                href="#about"
+                aria-label="About"
+                className="block px-20 py-7 hover:text-green-500 md:px-0 md:py-0"
+              >
                 About
               </a>
             </li>
             <li>
-              <a href="#projects" className="block hover:text-green-500">
+              <a
+                href="#projects"
+                aria-label="Projects"
+                className="block px-20 py-7 hover:text-green-500 md:px-0 md:py-0"
+              >
                 Projects
               </a>
             </li>
             <li>
-              <a href="#contact" className="block hover:text-green-500">
+              <a
+                href="#contact"
+                aria-label="Contact"
+                className="block px-20 py-7 hover:text-green-500 md:px-0 md:py-0"
+              >
                 Contact
+              </a>
+            </li>
+            <li className="md:hidden">
+              <a
+                href={Resume}
+                target="_blank"
+                aria-label="Resume"
+                className="block px-20 py-7 hover:text-green-500 md:px-0 md:py-0"
+              >
+                Resume
               </a>
             </li>
           </ul>
         </div>
       </div>
+      <div
+        className={`${isNavOpen ? "" : "hidden"} fixed z-10 h-screen w-full bg-opacity-50 backdrop-blur-sm`}
+        onClick={() => setIsNavOpen(false)}
+      ></div>
     </nav>
   );
 };
