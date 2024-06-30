@@ -56,20 +56,20 @@ const projects: Project[] = [
   {
     title: "Eva Schindele",
     description: "Website for Dr. Eva Schindele, a distinguished social scientist and journalist.",
-    tags: ["WordPress"],
+    tags: ["WordPress", "Elementor"],
     liveUrl: "https://eva-schindele.de",
   },
   {
     title: "Bublitz",
     description: "Website for Bublitz gGmbH, an artist and curator initiative that blends art and cultural history.",
-    tags: ["WordPress", "CSS"],
+    tags: ["WordPress", "SiteOrigin"],
     liveUrl: "https://bublitz.org/en/",
   },
   {
     title: "Norddeutsches Bauleitkontor",
     description:
       "Website for Norddeutsches Bauleitkontor GmbH, a firm specializing in planning, construction management, and supervision.",
-    tags: ["WordPress"],
+    tags: ["WordPress", "Elementor"],
     liveUrl: "https://bauleitkontor.de",
   },
 ];
