@@ -104,6 +104,7 @@ const NavBar: React.FC = () => {
                 href="#about"
                 aria-label="About"
                 className="block px-20 py-7 hover:text-green-500 md:px-0 md:py-0"
+                onClick={() => setIsNavOpen(false)}
               >
                 About
               </a>
@@ -113,6 +114,7 @@ const NavBar: React.FC = () => {
                 href="#projects"
                 aria-label="Projects"
                 className="block px-20 py-7 hover:text-green-500 md:px-0 md:py-0"
+                onClick={() => setIsNavOpen(false)}
               >
                 Projects
               </a>
@@ -122,6 +124,7 @@ const NavBar: React.FC = () => {
                 href="#contact"
                 aria-label="Contact"
                 className="block px-20 py-7 hover:text-green-500 md:px-0 md:py-0"
+                onClick={() => setIsNavOpen(false)}
               >
                 Contact
               </a>
@@ -132,6 +135,7 @@ const NavBar: React.FC = () => {
                 target="_blank"
                 aria-label="Resume"
                 className="block px-20 py-7 hover:text-green-500 md:px-0 md:py-0"
+                onClick={() => setIsNavOpen(false)}
               >
                 Resume
               </a>
