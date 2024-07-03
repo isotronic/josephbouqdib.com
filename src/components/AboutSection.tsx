@@ -32,9 +32,8 @@ const AboutSection: React.FC = () => {
             for creating complete websites and apps. I am constantly striving to improve myself and enjoy learning about
             new technologies.
           </p>
-          <p>These are some of the technologies I have used:</p>
+          <p>Some of the technologies I've worked with:</p>
           <ul className="grid list-inside list-disc grid-cols-2 gap-2 marker:text-green-500">
-            <li>JavaScript</li>
             <li>TypeScript</li>
             <li>React (Native)</li>
             <li>Express</li>
