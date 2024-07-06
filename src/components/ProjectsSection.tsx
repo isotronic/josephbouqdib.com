@@ -15,14 +15,14 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Portfolio website",
-    description: "This is my portfolio website, built with React and Tailwind CSS.",
+    description: "This is my portfolio website, built with React and Tailwind CSS. You're looking at it right now.",
     tags: ["TypeScript", "React", "Tailwind CSS"],
     githubUrl: "https://github.com/isotronic/josephbouqdib.com",
   },
   {
-    title: "Simple full-stack blog",
+    title: "Full-stack blog",
     description:
-      "A simple blog application built with React, Bootstrap, and a backend API running on Node.js and Express with MongoDB.",
+      "A JavaScript blog application built with React and Bootstrap, and a backend API running on Node.js with Express and MongoDB.",
     tags: ["React", "Bootstrap", "Express", "MongoDB"],
     githubUrl: "https://github.com/isotronic/react-blog",
   },
@@ -31,6 +31,20 @@ const projects: Project[] = [
     description: "This is a web app that helps users find nearby restaurants based on their preferences and location.",
     tags: ["TypeScript", "React", "Firebase"],
     githubUrl: "https://github.com/isotronic/food-finder-app",
+  },
+  {
+    title: "HTTP/1.1 Server",
+    description:
+      "A very simple http server written in Python that can serve concurrent connections, save/read a string to/from a file, read headers, echo the body, handle gzip compression.",
+    tags: ["Python", "Socket", "Threading"],
+    githubUrl: "https://github.com/isotronic/http-server-python",
+  },
+  {
+    title: "Python Shell",
+    description:
+      "A POSIX-compliant shell that can interpret shell commands, run external programs and has some built-in commands like cd, pwd, echo and type.",
+    tags: ["Python"],
+    githubUrl: "https://github.com/isotronic/shell-python/",
   },
   {
     title: "Billboard to Spotify Playlist Generator",
@@ -119,7 +133,7 @@ const ProjectsSection: React.FC = () => {
   return (
     <AnimatedSection id="projects" className="mx-auto mt-60 max-w-6xl px-12 py-12 lg:px-0">
       <h2 className="text-center text-3xl font-semibold">Projects</h2>
-
+      <p className="mt-4 text-center text-slate-400">This is a selection of projects I have worked on.</p>
       <div className="mt-12 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />

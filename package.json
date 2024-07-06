@@ -2,7 +2,7 @@
   "name": "josephbouqdib.com",
   "version": "1.0.0",
   "private": true,
-  "description": "My personal portfolio website built with Gatsby,TypeScript, React and Tailwind CSS.",
+  "description": "My personal portfolio website built with Gatsby, TypeScript, React and Tailwind CSS.",
   "author": "Joseph Bouqdib",
   "keywords": [
     "gatsby"

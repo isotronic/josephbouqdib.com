@@ -43,18 +43,8 @@ const NavBar: React.FC = () => {
     >
       <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between p-4">
         <a href="/" className="flex items-center space-x-3">
-          <svg
-            width="50"
-            height="50"
-            viewBox="0 0 100 100"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <polygon
-              points="50,5 90,25 90,75 50,95 10,75 10,25"
-              fill="#0f172a"
-              stroke="#22c55e"
-              stroke-width="4"
-            />
+          <svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" fill="#0f172a" stroke="#22c55e" stroke-width="4" />
             <text
               x="50%"
               y="52%"

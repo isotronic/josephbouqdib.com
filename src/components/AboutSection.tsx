@@ -33,15 +33,15 @@ const AboutSection: React.FC = () => {
             new technologies.
           </p>
           <p>Some of the technologies I've worked with:</p>
-          <ul className="grid list-inside list-disc grid-cols-2 gap-2 marker:text-green-500">
+          <ul className="grid list-inside list-disc grid-cols-2 gap-2 font-semibold marker:text-green-500">
             <li>TypeScript</li>
+            <li>Python</li>
             <li>React (Native)</li>
-            <li>Express</li>
+            <li>Express.js</li>
             <li>Node.js</li>
             <li>Firebase</li>
             <li>MongoDB</li>
             <li>SQL</li>
-            <li>Python</li>
           </ul>
         </div>
       </AnimatedSection>

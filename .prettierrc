@@ -7,7 +7,6 @@
   "insertPragma": false,
   "singleAttributePerLine": false,
   "bracketSameLine": false,
-  "jsxBracketSameLine": false,
   "jsxSingleQuote": false,
   "printWidth": 120,
   "proseWrap": "preserve",
@@ -19,6 +18,5 @@
   "trailingComma": "es5",
   "useTabs": false,
   "embeddedLanguageFormatting": "auto",
-  "vueIndentScriptAndStyle": false,
-  "parser": "json"
+  "vueIndentScriptAndStyle": false
 }

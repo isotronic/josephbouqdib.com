@@ -7,11 +7,7 @@ interface SectionProps {
   id: string;
 }
 
-const AnimatedSection: React.FC<SectionProps> = ({
-  children,
-  className,
-  id,
-}) => {
+const AnimatedSection: React.FC<SectionProps> = ({ children, className, id }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -30,7 +26,7 @@ const AnimatedSection: React.FC<SectionProps> = ({
       },
       {
         threshold: 0.1,
-      },
+      }
     );
 
     if (currentRef) {
