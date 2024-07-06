@@ -15,14 +15,15 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Portfolio website",
-    description: "This is my portfolio website, built with React and Tailwind CSS. You're looking at it right now.",
+    description:
+      "This is my portfolio website, built with React and Tailwind CSS. You're looking at it right now, so feel free to explore.",
     tags: ["TypeScript", "React", "Tailwind CSS"],
     githubUrl: "https://github.com/isotronic/josephbouqdib.com",
   },
   {
     title: "Full-stack blog",
     description:
-      "A JavaScript blog application built with React and Bootstrap, and a backend API running on Node.js with Express and MongoDB.",
+      "A blog application built with React and Bootstrap, and a backend API running on Node.js with Express and MongoDB.",
     tags: ["React", "Bootstrap", "Express", "MongoDB"],
     githubUrl: "https://github.com/isotronic/react-blog",
   },

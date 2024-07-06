@@ -34,7 +34,9 @@ const AnimatedSection: React.FC<SectionProps> = ({ children, className, id }) =>
     }
 
     return () => {
-      if (currentRef) observer.unobserve(currentRef);
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
     };
   }, []);
 
