@@ -43,25 +43,15 @@ const NavBar: React.FC = () => {
     >
       <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between p-4">
         <a href="/" className="flex items-center space-x-3">
-          <svg
-            width="50"
-            height="50"
-            viewBox="0 0 100 100"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <polygon
-              points="50,5 90,25 90,75 50,95 10,75 10,25"
-              fill="#0f172a"
-              stroke="#22c55e"
-              stroke-width="4"
-            />
+          <svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" fill="#0f172a" stroke="#22c55e" strokeWidth="4" />
             <text
               x="50%"
               y="52%"
-              dominant-baseline="middle"
-              text-anchor="middle"
-              font-family="Inter"
-              font-size="35"
+              dominantBaseline="middle"
+              textAnchor="middle"
+              fontFamily="Inter"
+              fontSize="35"
               fill="#22c55e"
             >
               JB
@@ -86,9 +76,9 @@ const NavBar: React.FC = () => {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M1 1h15M1 7h15M1 13h15"
             />
           </svg>
