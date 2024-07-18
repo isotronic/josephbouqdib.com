@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 
-import Resume from "../static/resume-joseph_bouqdib.pdf";
+import Resume from "../static/resume-joseph_bouqdib_24.pdf";
 
 const NavBar: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
@@ -123,6 +123,7 @@ const NavBar: React.FC = () => {
               <a
                 href={Resume}
                 target="_blank"
+                rel="noindex nofollow"
                 aria-label="Resume"
                 className="block px-20 py-7 hover:text-green-500 md:px-0 md:py-0"
                 onClick={() => setIsNavOpen(false)}
