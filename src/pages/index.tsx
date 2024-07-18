@@ -31,7 +31,22 @@ export default IndexPage;
 
 export const Head: HeadFC = () => (
   <>
-    <title>Joseph Bouqdib</title>
+    <title>Joseph Bouqdib - Full-Stack Developer</title>
+    <meta
+      name="description"
+      content="I am a full-stack developer, passionate about creating outstanding digital experiences. Currently, I am
+          focusing on developing web and mobile applications using React (Native) and Node.js."
+    />
+    <link rel="canonical" href="https://joseph.bouqdib.com" />
     <link rel="icon" type="image/svg+xml" href={Favicon} />
+    <meta property="og:title" content="Joseph Bouqdib - Full-Stack Developer" />
+    <meta
+      property="og:description"
+      content="I am a full-stack developer, passionate about creating outstanding digital experiences. Currently, I am
+          focusing on developing web and mobile applications using React (Native) and Node.js."
+    />
+    <meta property="og:image" content={Favicon} />
+    <meta property="og:url" content="https://joseph.bouqdib.com/" />
+    <meta name="twitter:image" content={Favicon} />
   </>
 );
