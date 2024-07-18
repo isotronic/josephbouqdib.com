@@ -1,5 +1,5 @@
 import * as React from "react";
-import Resume from "../static/resume-joseph_bouqdib.pdf";
+import Resume from "../static/resume-joseph_bouqdib_24.pdf";
 
 const AboutSection: React.FC = () => {
   return (
@@ -16,6 +16,7 @@ const AboutSection: React.FC = () => {
         </p>
         <a
           href={Resume}
+          rel="noindex nofollow"
           target="_blank"
           aria-label="Resume"
           className="mb-16 mt-8 inline-block rounded-md border border-green-500 px-6 py-3 text-green-500 transition hover:bg-green-500 hover:text-slate-900"
