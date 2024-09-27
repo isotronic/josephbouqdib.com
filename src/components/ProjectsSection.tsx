@@ -142,7 +142,7 @@ const FeaturedProject: React.FC<ProjectCardProps> = ({ title, description, tags,
 
       <div className="mt-6 lg:ml-6 lg:mt-0 lg:w-1/3">
         <div className="flex w-full items-center justify-center rounded-lg bg-gray-700">
-          {image && <img src={image} alt="MuscleQuest Screenshot" className="h-full w-full rounded-lg object-cover" />}
+          {image && <img src={image} alt="MuscleQuest Logo" className="h-full w-full rounded-lg object-cover" />}
         </div>
       </div>
     </div>
