@@ -151,7 +151,7 @@ const FeaturedProject: React.FC<ProjectCardProps> = ({ title, description, tags,
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tags, githubUrl, liveUrl }) => {
   return (
-    <div className="rounded-lg bg-slate-800 p-6 shadow-sm">
+    <div className="rounded-lg bg-slate-800 p-6 shadow-md">
       <div className="flex items-center justify-between">
         <div className="text-4xl text-green-500">
           <FaRegFolder />
