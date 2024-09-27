@@ -8,7 +8,9 @@ const AboutSection: React.FC = () => {
         <p className="mb-6 mt-16 text-green-500">Hi, my name is</p>
         <h1 className="text-4xl font-bold md:text-7xl">Joseph Bouqdib.</h1>
         <h2 className="mt-4 text-4xl font-bold text-slate-400 md:mt-6 md:text-7xl">
-          I build things for web and mobile.
+          I build things for the
+          <br />
+          web and mobile.
         </h2>
         <p className="mt-6 max-w-lg text-slate-400">
           I am a full-stack developer, passionate about creating outstanding digital experiences. Currently, I am

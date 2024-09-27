@@ -3,6 +3,7 @@ import { FaGithub, FaRegFolder } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 import AnimatedSection from "./AnimatedSection";
+import splashScreenImage from "../images/splash.png";
 
 interface Project {
   title: string;
@@ -10,7 +11,17 @@ interface Project {
   tags: string[];
   githubUrl?: string;
   liveUrl?: string;
+  image?: string;
 }
+
+const featuredProject: Project = {
+  title: "MuscleQuest (in development)",
+  description:
+    "MuscleQuest is a sleek workout tracker designed for fitness enthusiasts to easily manage their routines and track progress. Built with React Native, it lets users create workout plans, log sets and reps, and track active sessions. With local-first storage, your data is always accessible on your device, while Firebase securely handles authentication. MuscleQuest also offers detailed workout history and performance stats, making it the perfect tool to elevate your fitness journey.",
+  tags: ["TypeScript", "React Native", "Expo", "SQLite", "Tanstack Query", "Zustand"],
+  githubUrl: "https://github.com/isotronic/musclequest",
+  image: splashScreenImage,
+};
 
 const projects: Project[] = [
   {
@@ -95,11 +106,52 @@ interface ProjectCardProps {
   tags: string[];
   githubUrl?: string;
   liveUrl?: string;
+  image?: string;
 }
+
+const FeaturedProject: React.FC<ProjectCardProps> = ({ title, description, tags, githubUrl, liveUrl, image }) => {
+  return (
+    <div className="rounded-lg bg-slate-800 p-10 shadow-md lg:flex lg:items-center">
+      <div className="lg:w-2/3">
+        <div className="flex items-center justify-between">
+          <h3 className="text-3xl font-bold text-green-500">{title}</h3>
+          <div className="flex space-x-6 text-4xl text-green-500">
+            {githubUrl && (
+              <a href={githubUrl} target="_blank" rel="noreferrer" aria-label="GitHub">
+                <FaGithub />
+              </a>
+            )}
+            {liveUrl && (
+              <a href={liveUrl} target="_blank" rel="noreferrer" aria-label="Live site">
+                <FaExternalLinkAlt />
+              </a>
+            )}
+          </div>
+        </div>
+
+        <p className="mt-4 text-lg text-slate-400">{description}</p>
+
+        <div className="text-md mt-4 flex flex-wrap text-slate-200">
+          {tags.map((tag, index) => (
+            <span key={index} className="mb-2 mr-2 rounded-md bg-slate-600 px-3 py-1">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-6 lg:ml-6 lg:mt-0 lg:w-1/3">
+        <div className="flex w-full items-center justify-center rounded-lg bg-gray-700">
+          {image && <img src={image} alt="MuscleQuest Logo" className="h-full w-full rounded-lg object-cover" />}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tags, githubUrl, liveUrl }) => {
   return (
-    <div className="rounded-lg bg-slate-800 p-6 shadow-sm">
+    <div className="rounded-lg bg-slate-800 p-6 shadow-md">
       <div className="flex items-center justify-between">
         <div className="text-4xl text-green-500">
           <FaRegFolder />
@@ -119,9 +171,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tags, git
       </div>
       <h3 className="mt-4 text-xl font-semibold">{title}</h3>
       <p className="mt-2 text-slate-400">{description}</p>
-      <div className="mt-4 flex flex-wrap space-x-2 text-slate-200">
-        {tags.map((tag) => (
-          <span key={tag} className="text-sm">
+      <div className="-mb-2 -ml-2 mt-4 flex flex-wrap text-slate-200">
+        {tags.map((tag, index) => (
+          <span key={index} className="mb-2 ml-2 rounded-md bg-slate-600 px-3 py-1 text-sm">
             {tag}
           </span>
         ))}
@@ -134,8 +186,13 @@ const ProjectsSection: React.FC = () => {
   return (
     <AnimatedSection id="projects" className="mx-auto mt-60 max-w-6xl px-12 py-12 lg:px-0">
       <h2 className="text-center text-3xl font-semibold">Projects</h2>
-      <p className="mt-4 text-center text-slate-400">This is a selection of projects I have worked on.</p>
-      <div className="mt-12 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <p className="mt-4 text-center">This is a selection of freelance and personal projects I have worked on.</p>
+
+      <div className="mt-12">
+        <FeaturedProject {...featuredProject} />
+      </div>
+
+      <div className="mt-8 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
