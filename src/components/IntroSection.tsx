@@ -16,7 +16,7 @@ const AboutSection: React.FC = () => {
           I am a full-stack developer, passionate about creating outstanding digital experiences. Currently, I am
           focusing on developing web and mobile applications using React (Native) and Node.js.
         </p>
-        <a
+        {/* <a
           href={Resume}
           rel="noindex nofollow"
           target="_blank"
@@ -24,7 +24,7 @@ const AboutSection: React.FC = () => {
           className="mb-16 mt-8 inline-block rounded-md border border-green-500 px-6 py-3 text-green-500 transition hover:bg-green-500 hover:text-slate-900"
         >
           Check out my resume
-        </a>
+        </a> */}
       </div>
     </section>
   );
