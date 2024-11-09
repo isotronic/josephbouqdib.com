@@ -7,15 +7,12 @@ import ProfilePic from "../images/profile-pic.png";
 const AboutSection: React.FC = () => {
   return (
     <>
-      <AnimatedSection
-        id="about"
-        className="mx-auto mb-12 flex max-w-6xl flex-col px-12 md:flex-row lg:items-center lg:px-0"
-      >
+      <AnimatedSection id="about" className="mx-auto mb-12 flex max-w-6xl flex-col md:flex-row lg:items-center lg:px-0">
         <div className="flex w-full justify-center md:w-1/3">
           <img
             src={ProfilePic}
             alt="Profile Picture"
-            className="mx-auto h-80 w-80 rounded-full object-cover sm:h-56 sm:w-56 lg:h-80 lg:w-80"
+            className="mx-auto h-80 w-80 rounded-full object-cover lg:h-80 lg:w-80"
           />
         </div>
         <div className="mt-8 w-full space-y-10 text-left md:mt-0 md:w-2/3 md:pl-12">

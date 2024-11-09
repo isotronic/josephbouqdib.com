@@ -3,7 +3,7 @@ import AnimatedSection from "./AnimatedSection";
 
 const ContactSection: React.FC = () => {
   return (
-    <AnimatedSection id="contact" className="mx-auto my-60 max-w-lg px-12 py-12 text-center lg:px-0">
+    <AnimatedSection id="contact" className="mx-auto my-60 max-w-lg text-center lg:px-0">
       <h2 className="mb-12 text-3xl font-semibold">Contact Me</h2>
       <p className="mb-4">
         You can always reach out to me if you have any questions, want to discuss potential opportunities, or even just

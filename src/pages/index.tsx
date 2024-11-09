@@ -13,10 +13,10 @@ import Favicon from "../images/favicon.png";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col overflow-x-hidden">
       <NavBar />
       <SocialLinks />
-      <main className="container mx-auto">
+      <main className="container mx-auto px-5">
         <IntroSection />
         <AboutSection />
         <ProjectsSection />
