@@ -4,7 +4,7 @@ import Resume from "../static/resume-joseph_bouqdib_24.pdf";
 const AboutSection: React.FC = () => {
   return (
     <section className="flex min-h-screen items-center justify-center">
-      <div className="mb:mx-auto mx-12 max-w-4xl text-left">
+      <div className="mb:mx-auto max-w-4xl text-left">
         <p className="mb-6 mt-16 text-green-500">Hi, my name is</p>
         <h1 className="text-4xl font-bold md:text-7xl">Joseph Bouqdib.</h1>
         <h2 className="mt-4 text-4xl font-bold text-slate-400 md:mt-6 md:text-7xl">
