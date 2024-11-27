@@ -34,6 +34,7 @@ const AboutSection: React.FC = () => {
             <li>TypeScript</li>
             <li>Python</li>
             <li>React (Native)</li>
+            <li>Expo</li>
             <li>Express.js</li>
             <li>Node.js</li>
             <li>Firebase</li>
