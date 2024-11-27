@@ -29,7 +29,7 @@ const projects: Project[] = [
     title: "Portfolio website",
     description:
       "This is my portfolio website, built with React and Tailwind CSS. You're looking at it right now, so feel free to explore.",
-    tags: ["TypeScript", "React", "Tailwind CSS"],
+    tags: ["TypeScript", "React", "Tailwind CSS", "Gatsby"],
     githubUrl: "https://github.com/isotronic/josephbouqdib.com",
   },
   {
@@ -42,7 +42,7 @@ const projects: Project[] = [
   {
     title: "Food Finder App",
     description: "This is a web app that helps users find nearby restaurants based on their preferences and location.",
-    tags: ["TypeScript", "React", "Firebase"],
+    tags: ["TypeScript", "React", "Firebase", "Maps API"],
     githubUrl: "https://github.com/isotronic/food-finder-app",
   },
   {
@@ -62,7 +62,7 @@ const projects: Project[] = [
   {
     title: "Billboard to Spotify Playlist Generator",
     description:
-      "This Python script fetches the Billboard Hot 100 chart for a specified date and creates a private Spotify playlist containing the top 100 songs from that date.",
+      "This Python script fetches the Billboard Hot 100 chart for a specified date, and creates a private Spotify playlist containing the top 100 songs from that date.",
     tags: ["Python", "BeautifulSoup", "Spotipy"],
     githubUrl: "https://github.com/isotronic/top100-music-time-machine",
   },
@@ -82,7 +82,8 @@ const projects: Project[] = [
   },
   {
     title: "Eva Schindele",
-    description: "Website for Dr. Eva Schindele, a distinguished social scientist and journalist.",
+    description:
+      "Website for Dr. Eva Schindele, a distinguished author and journalist specialising in social sciences.",
     tags: ["WordPress", "Elementor"],
     liveUrl: "https://eva-schindele.de",
   },
@@ -95,7 +96,7 @@ const projects: Project[] = [
   {
     title: "Norddeutsches Bauleitkontor",
     description:
-      "Website for Norddeutsches Bauleitkontor GmbH, a firm specializing in planning, construction management, and supervision.",
+      "Website for Norddeutsches Bauleitkontor GmbH, a firm specialising in planning, construction management and supervision.",
     tags: ["WordPress", "Elementor"],
     liveUrl: "https://bauleitkontor.de",
   },
