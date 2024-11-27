@@ -1,5 +1,5 @@
 import * as React from "react";
-import Resume from "../static/resume-joseph_bouqdib_24.pdf";
+// import Resume from "../static/resume-joseph_bouqdib_24.pdf";
 
 const AboutSection: React.FC = () => {
   return (
@@ -16,15 +16,14 @@ const AboutSection: React.FC = () => {
           I am a full-stack developer, passionate about creating outstanding digital experiences. Currently, I am
           focusing on developing web and mobile applications using React (Native) and Node.js.
         </p>
-        {/* <a
-          href={Resume}
-          rel="noindex nofollow"
+        <a
+          href="#projects"
           target="_blank"
-          aria-label="Resume"
+          aria-label="Projects"
           className="mb-16 mt-8 inline-block rounded-md border border-green-500 px-6 py-3 text-green-500 transition hover:bg-green-500 hover:text-slate-900"
         >
-          Check out my resume
-        </a> */}
+          Check out what I&apos;ve built
+        </a>
       </div>
     </section>
   );

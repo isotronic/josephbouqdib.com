@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 
-import Resume from "../static/resume-joseph_bouqdib_24.pdf";
+// import Resume from "../static/resume-joseph_bouqdib_24.pdf";
 
 const NavBar: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
@@ -119,7 +119,7 @@ const NavBar: React.FC = () => {
                 Contact
               </a>
             </li>
-            <li className="md:hidden">
+            {/* <li>
               <a
                 href={Resume}
                 target="_blank"
@@ -130,7 +130,7 @@ const NavBar: React.FC = () => {
               >
                 Resume
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
