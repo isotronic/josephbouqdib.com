@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FaGithub, FaRegFolder } from "react-icons/fa6";
+import { FaGithub, FaRegFolder, FaGooglePlay } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 import AnimatedSection from "./AnimatedSection";
@@ -10,6 +10,7 @@ interface Project {
   description: string;
   tags: string[];
   githubUrl?: string;
+  playStoreUrl?: string;
   liveUrl?: string;
   image?: string;
 }
@@ -20,6 +21,7 @@ const featuredProject: Project = {
     "MuscleQuest is a sleek workout tracker designed for fitness enthusiasts to easily manage their routines and track progress. Built with React Native, it lets users create workout plans, log sets and reps, and track active sessions. With local-first storage, your data is always accessible on your device, while Firebase securely handles authentication. MuscleQuest also offers detailed workout history and performance stats, making it the perfect tool to elevate your fitness journey.",
   tags: ["TypeScript", "React Native", "Expo", "SQLite", "Tanstack Query", "Zustand"],
   githubUrl: "https://github.com/isotronic/musclequest",
+  playStoreUrl: "https://play.google.com/store/apps/details?id=com.isotronic.musclequest",
   liveUrl: "https://musclequest.app/",
   image: splashScreenImage,
 };
@@ -107,11 +109,20 @@ interface ProjectCardProps {
   description: string;
   tags: string[];
   githubUrl?: string;
+  playStoreUrl?: string;
   liveUrl?: string;
   image?: string;
 }
 
-const FeaturedProject: React.FC<ProjectCardProps> = ({ title, description, tags, githubUrl, liveUrl, image }) => {
+const FeaturedProject: React.FC<ProjectCardProps> = ({
+  title,
+  description,
+  tags,
+  githubUrl,
+  playStoreUrl,
+  liveUrl,
+  image,
+}) => {
   return (
     <div className="flex flex-col rounded-lg bg-slate-800 p-4 shadow-md sm:p-6 lg:flex-row lg:items-center">
       <div className="order-2 lg:order-1 lg:w-2/3">
@@ -121,6 +132,11 @@ const FeaturedProject: React.FC<ProjectCardProps> = ({ title, description, tags,
             {githubUrl && (
               <a href={githubUrl} target="_blank" rel="noreferrer" aria-label="GitHub">
                 <FaGithub />
+              </a>
+            )}
+            {playStoreUrl && (
+              <a href={playStoreUrl} target="_blank" rel="noreferrer" aria-label="Play Store">
+                <FaGooglePlay />
               </a>
             )}
             {liveUrl && (
