@@ -2,7 +2,7 @@ import * as React from "react";
 
 import AnimatedSection from "./AnimatedSection";
 
-import ProfilePic from "../images/profile-pic.png";
+import ProfilePic from "../images/profile-pic2025-min.jpg";
 
 const AboutSection: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const AboutSection: React.FC = () => {
           <img
             src={ProfilePic}
             alt="Profile Picture"
-            className="mx-auto h-80 w-80 rounded-full object-cover lg:h-80 lg:w-80"
+            className="mx-auto h-80 w-80 rounded-full object-cover object-[0%_30%] lg:h-80 lg:w-80"
           />
         </div>
         <div className="mt-8 w-full space-y-10 text-left md:mt-0 md:w-2/3 md:pl-12">
