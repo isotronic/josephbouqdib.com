@@ -18,7 +18,6 @@ const AboutSection: React.FC = () => {
         </p>
         <a
           href="#projects"
-          target="_blank"
           aria-label="Projects"
           className="mb-16 mt-8 inline-block rounded-md border border-green-500 px-6 py-3 text-green-500 transition hover:bg-green-500 hover:text-slate-900"
         >
