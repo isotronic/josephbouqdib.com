@@ -28,6 +28,13 @@ const featuredProject: Project = {
 
 const projects: Project[] = [
   {
+    title: "crispdigital website",
+    description:
+      "A comprehensive digital agency website built for crispdigital, featuring modern web development, mobile app development, and design services. The site showcases their expertise in custom development with technologies like Astro, React, and Node.js, emphasising fast performance and beautiful design.",
+    tags: ["Astro", "React", "TypeScript", "Web Design"],
+    liveUrl: "https://crispdigital.co",
+  },
+  {
     title: "Portfolio website",
     description:
       "This is my portfolio website, built with React and Tailwind CSS. You're looking at it right now, so feel free to explore.",
