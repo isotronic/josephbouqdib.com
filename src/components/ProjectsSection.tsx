@@ -28,10 +28,17 @@ const featuredProject: Project = {
 
 const projects: Project[] = [
   {
+    title: "AHC SC Website",
+    description:
+      "The website for the Austin Healey Club Southern Counties Centre, built with Astro, Tailwind CSS, Decap CMS, and deployed on Netlify.",
+    tags: ["TypeScript", "Astro", "Tailwind CSS", "Decap CMS"],
+    liveUrl: "https://ahc-sc.org.uk/",
+  },
+  {
     title: "crispdigital website",
     description:
-      "A comprehensive digital agency website built for crispdigital, featuring modern web development, mobile app development, and design services. The site showcases their expertise in custom development with technologies like Astro, React, and Node.js, emphasising fast performance and beautiful design.",
-    tags: ["Astro", "React", "TypeScript", "Web Design"],
+      "A comprehensive digital agency website built for crispdigital, featuring modern web development, mobile app development, and design services. The site emphasises fast performance and beautiful design.",
+    tags: ["Astro", "React", "TypeScript"],
     liveUrl: "https://crispdigital.co",
   },
   {
