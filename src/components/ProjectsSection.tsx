@@ -30,8 +30,8 @@ const projects: Project[] = [
   {
     title: "AHC SC Website",
     description:
-      "The website for the Austin Healey Club Southern Counties Centre, built with Astro, Tailwind CSS, Decap CMS, and deployed on Netlify.",
-    tags: ["TypeScript", "Astro", "Tailwind CSS", "Decap CMS"],
+      "The website for the Austin Healey Club Southern Counties Centre, built with Astro, Tailwind CSS, Decap CMS, and deployed on Netlify. I added a members area for document storage and implemented various custom features.",
+    tags: ["TypeScript", "Astro", "Tailwind CSS", "Decap CMS", "Supabase"],
     liveUrl: "https://ahc-sc.org.uk/",
   },
   {
