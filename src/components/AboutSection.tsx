@@ -18,7 +18,7 @@ const AboutSection: React.FC = () => {
         <div className="mt-8 w-full space-y-10 text-left md:mt-0 md:w-2/3 md:pl-12">
           <h2 className="text-3xl font-semibold">About Me</h2>
           <p>
-            Hello! My name is Joseph Bouqdib, and I am a self-taught web developer with a passion for creating beautiful
+            Hi! My name is Joseph Bouqdib, and I am a self-taught web developer with a passion for creating beautiful
             and functional websites and apps.
           </p>
           <p>
@@ -34,12 +34,13 @@ const AboutSection: React.FC = () => {
             <li>TypeScript</li>
             <li>Python</li>
             <li>React (Native)</li>
-            <li>Expo</li>
+            <li>Expo / EAS</li>
             <li>Express.js</li>
             <li>Node.js</li>
-            <li>Firebase</li>
+            <li>Firebase / Supabase</li>
             <li>MongoDB</li>
             <li>SQL</li>
+            <li>Go</li>
           </ul>
         </div>
       </AnimatedSection>
