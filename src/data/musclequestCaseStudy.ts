@@ -15,6 +15,7 @@ export interface CaseStudyExcerpt {
 }
 
 export interface CaseStudySection {
+  id: string;
   heading: string;
   body: string[];
   excerpt?: CaseStudyExcerpt;
@@ -32,6 +33,7 @@ export interface CaseStudy {
   stack: string[];
   sections: CaseStudySection[];
   screenshots: CaseStudyScreenshot[];
+  previewImage: string;
   links: {
     playStore: string;
     website: string;
@@ -65,12 +67,14 @@ export const caseStudy: CaseStudy = {
   ],
   sections: [
     {
+      id: "overview",
       heading: "Overview",
       body: [
         "MuscleQuest started as a way to log workouts without ads, accounts or a spinner in the gym. It has grown into a full training app: a plan editor with supersets and drop sets, adaptive progression, a configurable stats dashboard and sharing between friends.",
       ],
     },
     {
+      id: "offline-first-sqlite",
       heading: "Offline-first SQLite with versioned migrations and backup restore",
       body: [
         "Two databases sit on the device: a read-only exercise library shipped with the app, and a user database holding everything the user owns. The user database has to open cleanly on every boot, including right after a backup from a much older version has been restored.",
@@ -111,6 +115,7 @@ export const runMigrations = async (
       },
     },
     {
+      id: "timezone-model",
       heading: "The timezone model",
       body: [
         "A workout has two different times: the instant it finished and the day it counts towards. A session on Monday evening in Auckland must stay on Monday after the user flies to London, or a streak breaks for no reason.",
@@ -134,6 +139,7 @@ export const runMigrations = async (
       },
     },
     {
+      id: "set-navigation",
       heading: "Set and superset navigation",
       body: [
         "Completing a set looks like a small action, but nextSet() decides where the user goes next: the next set, the next member of a superset, the next round, or the first unfinished set of a later exercise. Users can jump around and redo sets freely, so it can never assume the workout is being done in order.",
@@ -169,6 +175,7 @@ if (members.length > 0) {
       },
     },
     {
+      id: "i18n",
       heading: "i18n with Lingui in four languages",
       body: [
         "The app follows the device language in English, German, Spanish and French, with a voice guide and terms table so all four read like one product. Hermes has no Intl.PluralRules, so plurals depend on a polyfill loaded before anything else.",
@@ -176,10 +183,12 @@ if (members.length > 0) {
       ],
     },
     {
+      id: "firebase-to-supabase",
       heading: "From Firebase to Supabase",
       body: ["This write-up follows once the move has shipped."],
     },
     {
+      id: "testing",
       heading: "Testing",
       body: [
         "Jest covers the stores, the data layer and the hooks, with coverage floors per directory. Because so much of the app depends on which day something happened, CI runs the suite again under Auckland, Kathmandu, London and Los Angeles.",
@@ -187,6 +196,7 @@ if (members.length > 0) {
       ],
     },
     {
+      id: "whats-next",
       heading: "What's next",
       body: ["Coaching features, and an iOS release."],
     },
@@ -201,6 +211,7 @@ if (members.length > 0) {
     { src: measurements, alt: "Measurement entry with body weight, body fat, waist and chest, above a history chart" },
     { src: friends, alt: "Friend profile with shared strength PRs, workouts and plans" },
   ],
+  previewImage: trainingWeek,
   links: {
     playStore: "https://play.google.com/store/apps/details?id=com.isotronic.musclequest",
     website: "https://musclequest.app/",

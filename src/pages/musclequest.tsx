@@ -14,11 +14,11 @@ import Favicon from "../images/favicon.png";
 const pageUrl = "https://joseph.bouqdib.com/musclequest/";
 const pageTitle = "MuscleQuest case study - Joseph Bouqdib";
 
-const Section: React.FC<{ section: CaseStudySection; index: number }> = ({ section, index }) => {
-  const { heading, body, excerpt } = section;
+const Section: React.FC<{ section: CaseStudySection }> = ({ section }) => {
+  const { id, heading, body, excerpt } = section;
 
   return (
-    <AnimatedSection id={`section-${index + 1}`} className="mt-20">
+    <AnimatedSection id={id} className="mt-20">
       <h2 className="text-2xl font-semibold text-slate-200 sm:text-3xl">{heading}</h2>
       {body.map((paragraph, paragraphIndex) => (
         <p key={paragraphIndex} className="mt-4 text-lg text-slate-400">
@@ -31,7 +31,11 @@ const Section: React.FC<{ section: CaseStudySection; index: number }> = ({ secti
             <code className="break-all text-sm text-green-500">{excerpt.file}</code>
             <p className="mt-1 text-sm text-slate-400">{excerpt.problem}</p>
           </figcaption>
-          <pre className="overflow-x-auto p-4 text-sm leading-normal text-slate-200" tabIndex={0}>
+          <pre
+            className="overflow-x-auto p-4 text-xs leading-normal text-slate-200 sm:text-sm"
+            tabIndex={0}
+            aria-label={`Code from ${excerpt.file}`}
+          >
             <code data-language={excerpt.language}>{excerpt.code}</code>
           </pre>
         </figure>
@@ -82,8 +86,8 @@ const MuscleQuestPage: React.FC<PageProps> = () => {
           ))}
         </div>
 
-        {sections.map((section, index) => (
-          <Section key={section.heading} section={section} index={index} />
+        {sections.map((section) => (
+          <Section key={section.id} section={section} />
         ))}
 
         <AnimatedSection id="screenshots" className="mt-20">
@@ -133,8 +137,8 @@ const MuscleQuestPage: React.FC<PageProps> = () => {
 export default MuscleQuestPage;
 
 export const Head: HeadFC = () => {
-  const { tagline, screenshots } = caseStudy;
-  const image = `https://joseph.bouqdib.com${screenshots[3].src}`;
+  const { tagline, previewImage } = caseStudy;
+  const image = `https://joseph.bouqdib.com${previewImage}`;
 
   return (
     <>
