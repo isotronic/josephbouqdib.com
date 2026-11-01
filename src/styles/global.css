@@ -14,6 +14,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* The grid item of body: without this, wide content such as a <pre> stretches the whole page. */
+#___gatsby {
+  min-width: 0;
+}
+
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
   width: 12px;
