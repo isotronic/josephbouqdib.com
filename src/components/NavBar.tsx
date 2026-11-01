@@ -91,7 +91,7 @@ const NavBar: React.FC = () => {
           <ul className="flex h-full min-h-screen flex-col items-center justify-center space-y-4 p-8 text-xl font-semibold md:mt-0 md:h-auto md:min-h-0 md:flex-row md:space-x-12 md:space-y-0 md:p-0 md:text-base md:font-medium">
             <li>
               <a
-                href="#about"
+                href="/#about"
                 aria-label="About"
                 className="block px-20 py-7 hover:text-green-500 md:px-0 md:py-0"
                 onClick={() => setIsNavOpen(false)}
@@ -101,7 +101,7 @@ const NavBar: React.FC = () => {
             </li>
             <li>
               <a
-                href="#projects"
+                href="/#projects"
                 aria-label="Projects"
                 className="block px-20 py-7 hover:text-green-500 md:px-0 md:py-0"
                 onClick={() => setIsNavOpen(false)}
@@ -111,7 +111,7 @@ const NavBar: React.FC = () => {
             </li>
             <li>
               <a
-                href="#contact"
+                href="/#contact"
                 aria-label="Contact"
                 className="block px-20 py-7 hover:text-green-500 md:px-0 md:py-0"
                 onClick={() => setIsNavOpen(false)}

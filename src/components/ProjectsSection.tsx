@@ -12,17 +12,18 @@ interface Project {
   githubUrl?: string;
   playStoreUrl?: string;
   liveUrl?: string;
+  caseStudyUrl?: string;
   image?: string;
 }
 
 const featuredProject: Project = {
   title: "MuscleQuest",
   description:
-    "MuscleQuest is a sleek workout tracker designed for fitness enthusiasts to easily manage their routines and track progress. Built with React Native, it lets users create workout plans, log sets and reps, and track active sessions. With local-first storage, your data is always accessible on your device, while Firebase securely handles authentication. MuscleQuest also offers detailed workout history and performance stats, making it the perfect tool to elevate your fitness journey.",
+    "MuscleQuest is an offline-first workout tracker for Android with no ads and no account required. Users build their own plans or start from premade ones, log sets in a tap from a library of over 1,000 exercises, and follow adaptive progression suggestions and detailed stats. Built with React Native and Expo, it keeps all training data in SQLite on the device, with Firebase behind the optional sign-in, cloud backups and sharing between friends in the current release, and a move to Supabase ready for version 2.0. Available in English, German, Spanish and French.",
   tags: ["TypeScript", "React Native", "Expo", "SQLite", "Tanstack Query", "Zustand"],
-  githubUrl: "https://github.com/isotronic/musclequest",
   playStoreUrl: "https://play.google.com/store/apps/details?id=com.isotronic.musclequest",
   liveUrl: "https://musclequest.app/",
+  caseStudyUrl: "/musclequest",
   image: splashScreenImage,
 };
 
@@ -125,6 +126,7 @@ interface ProjectCardProps {
   githubUrl?: string;
   playStoreUrl?: string;
   liveUrl?: string;
+  caseStudyUrl?: string;
   image?: string;
 }
 
@@ -135,6 +137,7 @@ const FeaturedProject: React.FC<ProjectCardProps> = ({
   githubUrl,
   playStoreUrl,
   liveUrl,
+  caseStudyUrl,
   image,
 }) => {
   return (
@@ -162,6 +165,16 @@ const FeaturedProject: React.FC<ProjectCardProps> = ({
         </div>
 
         <p className="mt-4 text-lg text-slate-400">{description}</p>
+
+        {caseStudyUrl && (
+          <a
+            href={caseStudyUrl}
+            className="mt-4 inline-flex items-center gap-2 text-lg font-semibold text-green-500 hover:text-green-400"
+          >
+            <FaRegFolder />
+            Case study
+          </a>
+        )}
 
         <div className="text-md mt-4 flex flex-wrap text-slate-200">
           {tags.map((tag, index) => (
