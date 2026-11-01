@@ -19,7 +19,7 @@ interface Project {
 const featuredProject: Project = {
   title: "MuscleQuest",
   description:
-    "MuscleQuest is a sleek workout tracker designed for fitness enthusiasts to easily manage their routines and track progress. Built with React Native, it lets users create workout plans, log sets and reps, and track active sessions. With local-first storage, your data is always accessible on your device, while Firebase securely handles authentication. MuscleQuest also offers detailed workout history and performance stats, making it the perfect tool to elevate your fitness journey.",
+    "MuscleQuest is an offline-first workout tracker for Android with no ads and no account required. Users build their own plans or start from premade ones, log sets in a tap from a library of over 1,000 exercises, and follow adaptive progression suggestions and detailed stats. Built with React Native and Expo, it keeps all training data in SQLite on the device, with Supabase behind the optional sign-in, cloud backups and sharing between friends. Available in English, German, Spanish and French.",
   tags: ["TypeScript", "React Native", "Expo", "SQLite", "Tanstack Query", "Zustand"],
   playStoreUrl: "https://play.google.com/store/apps/details?id=com.isotronic.musclequest",
   liveUrl: "https://musclequest.app/",
