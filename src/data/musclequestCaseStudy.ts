@@ -66,6 +66,7 @@ export const caseStudy: CaseStudy = {
     "Plans, sets, history and measurements live in SQLite on the device, so the app works without a connection or an account.",
     "A sign-in is only needed for backups and the opt-in social layer: friends, shared plans and shared records.",
     "Available in English, German, Spanish and French.",
+    "The live release, version 1.7, runs on Firebase. This page describes version 2.0, which moves to Supabase and is ready to release.",
   ],
   stats: [
     { value: "90,000", label: "lines of TypeScript, without tests" },
@@ -114,7 +115,7 @@ export const caseStudy: CaseStudy = {
       id: "architecture",
       heading: "Architecture",
       body: [
-        "The device is the source of truth. All training data lives in SQLite, and the app reads and writes it the same way with or without a connection. The cloud is an optional layer on top: it holds backups and whatever the user explicitly chooses to share, and nothing syncs back into the local database except an import the user asked for.",
+        "The device is the source of truth. Plans, history and everything else saved live in SQLite, and the app reads and writes them the same way with or without a connection. A workout in progress is kept in AsyncStorage so it survives the app being killed, and goes into SQLite when it is saved. The cloud is an optional layer on top: it holds backups and whatever the user explicitly chooses to share, and nothing syncs back into the local database except an import the user asked for.",
         "TanStack Query handles every SQLite read and write, so screens stay in step through query invalidation rather than a global data store. Zustand holds the state that is not a query result, above all the workout in progress.",
       ],
       diagram: [
@@ -140,7 +141,7 @@ export const caseStudy: CaseStudy = {
               items: [
                 { name: "appData.db", role: "Read-only exercise library, shipped with the app" },
                 { name: "userData.db", role: "Plans, history, settings, measurements" },
-                { name: "AsyncStorage", role: "Active session and queued sharing writes" },
+                { name: "AsyncStorage", role: "Workout in progress until saved, queued sharing writes" },
               ],
             },
           ],
