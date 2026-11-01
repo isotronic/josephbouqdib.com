@@ -7,15 +7,40 @@ import NavBar from "../components/NavBar";
 import SocialLinks from "../components/SocialLinks";
 import AnimatedSection from "../components/AnimatedSection";
 import Footer from "../components/Footer";
-import { caseStudy, type CaseStudySection } from "../data/musclequestCaseStudy";
+import { caseStudy, type ArchitectureGroup, type CaseStudySection } from "../data/musclequestCaseStudy";
 
 import Favicon from "../images/favicon.png";
 
 const pageUrl = "https://joseph.bouqdib.com/musclequest/";
 const pageTitle = "MuscleQuest case study - Joseph Bouqdib";
 
+const ArchitectureDiagram: React.FC<{ groups: ArchitectureGroup[] }> = ({ groups }) => (
+  <div className="mt-6 space-y-4">
+    {groups.map((group) => (
+      <div key={group.label} className="rounded-lg border border-slate-700 p-4">
+        <h3 className="text-sm font-semibold uppercase tracking-wide text-green-500">{group.label}</h3>
+        <div className="mt-3 space-y-3">
+          {group.layers.map((layer) => (
+            <div key={layer.name} className="rounded-lg bg-slate-800 p-3 shadow-md">
+              <h4 className="text-sm text-slate-400">{layer.name}</h4>
+              <dl className="mt-2 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                {layer.items.map((item) => (
+                  <div key={item.name} className="rounded-md bg-slate-700 p-3">
+                    <dt className="font-semibold text-slate-200">{item.name}</dt>
+                    <dd className="mt-1 text-sm text-slate-400">{item.role}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+);
+
 const Section: React.FC<{ section: CaseStudySection }> = ({ section }) => {
-  const { id, heading, body, excerpt } = section;
+  const { id, heading, body, diagram, excerpt } = section;
 
   return (
     <AnimatedSection id={id} className="mt-20">
@@ -25,6 +50,7 @@ const Section: React.FC<{ section: CaseStudySection }> = ({ section }) => {
           {paragraph}
         </p>
       ))}
+      {diagram && <ArchitectureDiagram groups={diagram} />}
       {excerpt && (
         <figure className="mt-6 rounded-lg bg-slate-800 shadow-md">
           <figcaption className="border-b border-slate-700 p-4">
@@ -45,7 +71,7 @@ const Section: React.FC<{ section: CaseStudySection }> = ({ section }) => {
 };
 
 const MuscleQuestPage: React.FC<PageProps> = () => {
-  const { title, tagline, summary, stack, sections, screenshots, links } = caseStudy;
+  const { title, tagline, summary, stats, stack, sections, screenshots, links } = caseStudy;
 
   return (
     <div className="flex min-h-screen flex-col overflow-x-hidden">
@@ -71,6 +97,15 @@ const MuscleQuestPage: React.FC<PageProps> = () => {
             Get it on Google Play
           </a>
         </header>
+
+        <dl className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          {stats.map(({ value, label }) => (
+            <div key={label} className="flex flex-col-reverse justify-end rounded-lg bg-slate-800 p-4 shadow-md">
+              <dt className="mt-1 text-sm text-slate-400">{label}</dt>
+              <dd className="text-2xl font-bold text-green-500">{value}</dd>
+            </div>
+          ))}
+        </dl>
 
         <ul className="mt-12 list-disc space-y-2 pl-5 text-lg text-slate-400 marker:text-green-500">
           {summary.map((item, index) => (
