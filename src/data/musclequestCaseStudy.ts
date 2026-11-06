@@ -66,11 +66,11 @@ export const caseStudy: CaseStudy = {
     "Plans, sets, history and measurements live in SQLite on the device, so the app works without a connection or an account.",
     "A sign-in is only needed for backups and the opt-in social layer: friends, shared plans and shared records.",
     "Available in English, German, Spanish and French.",
-    "The live release, version 1.7, runs on Firebase. This page describes version 2.0, which moves to Supabase and is ready to release.",
+    "Version 2.0, released in November 2026, moved sign-in, backups, friends and sharing from Firebase to Supabase.",
   ],
   stats: [
     { value: "90,000", label: "lines of TypeScript, without tests" },
-    { value: "374", label: "test files" },
+    { value: "400", label: "test files" },
     { value: "1,000+", label: "exercises" },
     { value: "4", label: "languages" },
     { value: "2024", label: "development started" },
@@ -331,12 +331,12 @@ if (members.length > 0) {
       id: "firebase-to-supabase",
       heading: "From Firebase to Supabase",
       body: [
-        "Version 2.0 replaces Firebase with Supabase: sign-in, backups, friends and sharing all move in one release. The reason is what comes next. Coaching needs a single backend with one identity for app users and trainers, and the move is cheapest while the number of signed-in accounts is still small. Firestore's rules depend on Firebase Auth, so sign-in could not move alone without a token bridge that would have cost more than moving everything.",
+        "Version 2.0 replaced Firebase with Supabase: sign-in, backups, friends and sharing moved in one release. The reason is what comes next. Coaching needs a single backend with one identity for app users and trainers, and the move is cheapest while the number of signed-in accounts is still small. Firestore's rules depend on Firebase Auth, so sign-in could not move alone without a token bridge that would have cost more than moving everything.",
         "Security moved from Firestore rules to row level security in Postgres, tested with pgTAP in CI. The publishable key ships in the app, so the rules have to hold on their own, and they cannot depend on the repository being private. Features that Firebase gave for free had to be rebuilt deliberately: live listeners became refetches on sign-in, on returning to the app, on pull to refresh and after a change, and Firestore's offline replay became the queue described above. A failed fetch resets only its own slice of state, and a passing outage keeps the cached copy.",
         "The hard part is moving real users without a cutover moment. People update at their own pace, and old builds keep writing to Firebase in the meantime, so the migration script is a mirror rather than a one-off copy. It can run again and again, and each run makes Supabase match Firebase for every user who has not signed in on 2.0 yet, including deletions. Once someone signs in with the same Google account they are cut over, and the script never touches their data again.",
-        "Old builds also need a controlled ending. An over-the-air update adds a minimum supported version check to the store versions still in use, each published from that version's own code. When the minimum is raised, those builds show an update screen, and it waits until a workout in progress has been saved. Only after a final migration run does Firebase get switched off.",
+        "Old builds also need a controlled ending. An over-the-air update adds a minimum supported version check to the store versions still in use, each published from that version's own code. When the minimum is raised, those builds show an update screen, and it waits until a workout in progress has been saved. After a final migration run Firebase is locked, and its data stays as a frozen copy until the new backend has automated backups of its own.",
         "One trap is worth remembering. Google registers each package name and signing key pair in one Cloud project only, so the OAuth clients have to stay in the old Firebase project. Deleting that project would break Google sign-in in every build, so the Firebase resources go and the empty project stays.",
-        "The code is finished and the migration has been rehearsed against real Firebase data with no failures. Publishing the release and running the migration are the last steps.",
+        "Version 2.0 shipped in November 2026. The first production run moved every account with its profile, shared items, friendships and backups without a failure, and a full device pass ran before the release reached everyone. That pass found the one serious bug: offline, Expo's fetch reports an Android exception the app did not recognise as a network failure, so the sharing queue took being offline as permanent and dropped what was waiting. The tests had used the browser's error message; they now use the ones the phone actually produced.",
       ],
       excerpt: {
         file: "utils/supabase/call.ts",
@@ -361,7 +361,7 @@ if (members.length > 0) {
       id: "testing",
       heading: "Testing",
       body: [
-        "Jest covers the stores, the data layer and the hooks across 374 test files, with coverage floors per directory that only move up. Because so much of the app depends on which day something happened, CI runs the suite again under Auckland, Kathmandu, London and Los Angeles.",
+        "Jest covers the stores, the data layer and the hooks across 400 test files, with coverage floors per directory that only move up. Because so much of the app depends on which day something happened, CI runs the suite again under Auckland, Kathmandu, London and Los Angeles.",
         "Database policies have their own pgTAP tests against a local Supabase stack, so access rules are checked rather than assumed, and CI fails if the generated database types drift from the migrations.",
         "Maestro flows drive a release build on an Android emulator before a release. They cover what unit tests cannot see: a rest that ends with the app in the background and must still notify, a quick workout that survives the app being killed, and a workout left in progress on an old build that resumes after a new one is installed over it.",
       ],
@@ -370,7 +370,7 @@ if (members.length > 0) {
       id: "whats-next",
       heading: "What's next",
       body: [
-        "Next is coaching, which brings the project back to where it started: my work as a trainer. A trainer gets a web app to invite clients, build and assign plans from the same exercise library, review what clients actually did and correct it where needed. A client enters an invite code in the app, agrees to what will be shared and from then on trains on plans marked as coming from their trainer.",
+        "Next is coaching, which brings the project back to where it started: my work as a trainer. A trainer gets a web app to invite clients, build and assign plans from the same exercise library, review what clients actually did and correct it where needed. That web app is in development, and the parts for invites, plan building and viewing a client's training are already built. A client enters an invite code in the app, agrees to what will be shared and from then on trains on plans marked as coming from their trainer.",
         "The offline promise stays. Sessions are recorded on the phone, as they are today, and go to the trainer through a queue that survives restarts and syncs when a connection is back, after a workout is saved or on demand. Every table is separated per organisation, with access rules tested in CI, so a trainer never sees another organisation's clients.",
         "Nothing changes for someone training alone. Every existing feature stays, and a solo user's training data never leaves the phone except for backups and what they choose to share with friends. Coaching also brings the first iOS release, so clients with iPhones can be coached too.",
       ],
